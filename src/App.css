@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+.MainPage {
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.MainPage .bar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+.MainPage .Span {
+  cursor: pointer;
+}
+.Login {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5fef1;
+}
+
+.Login .bar {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Login .bar .icon {
+}
+
+.box {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  /* justify-content가 가로정렬 align-items이 세로정렬   */
+}
+.box .wrapper {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-top: 30px;
+  border-radius: 15px;
+  background-color: white;
+  border: 1px solid #efefef;
+  width: 600px;
+  height: 600px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.box .wrapper h3 {
+  font-weight: medium;
+  font-size: 13px;
+}
+
+.box .wrapper input {
+  width: 400px;
+  border: none;
+  height: 28px;
+  border-bottom: 2px solid gray;
+}
+
+.box .wrapper .find {
+  padding: 20px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.box .wrapper button {
+  width: 500px;
+  height: 40px;
   color: white;
+  background-color: #353;
 }
 
-.App-link {
-  color: #61dafb;
+.Card .wrapper {
+  border: 1px solid red;
+  width: 300px;
+  height: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* .Card .wrapper .img { */
+/* object-fit: cover;
+} */
