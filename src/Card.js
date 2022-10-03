@@ -1,11 +1,13 @@
-const Card = ({ props }) => {
+const Card = ({ props, name, img }) => {
   return (
     <>
       <div className="Card">
         <div className="wrapper">
-          <img src="/sinhan.png" alt="신한은행" />
+          <img src={img} alt={name} />
           <br />
-          <a href={props}>링크</a>
+          <a href={props} target="_blank">
+            {name}
+          </a>
         </div>
       </div>
     </>
