@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
   const save = () => {
-    alert("저장");
+    alert("로그인되었습니다!");
   };
   return (
     <div className="Login">

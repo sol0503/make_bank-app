@@ -1,5 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import Card from "./Card";
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+/>;
 const MainPage = () => {
   const navigate = useNavigate();
   return (
@@ -41,6 +45,16 @@ const MainPage = () => {
           name={"토스뱅크"}
           img={"/toss.png"}
         />
+        <Card
+          props={"https://www.kakaobank.com/"}
+          name={"카카오뱅크"}
+          img={"/kakao.png"}
+        />
+        {/* <Card
+          props={"https://www.wooribank.com/"}
+          name={"우리은행"}
+          img={"/woori.png"}
+        /> */}
       </div>
     </div>
   );
