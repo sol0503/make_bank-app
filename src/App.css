@@ -17,13 +17,6 @@
   background-color: #f5fef1;
 }
 
-.Login .bar {
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .box {
   display: flex;
   justify-content: center;
@@ -90,16 +83,10 @@
 
 .Register {
   width: 100vw;
-  height: auto;
+  height: 100vw;
   background-color: #f5fef1;
 }
 
-.Register .bar {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  align-items: center;
-}
 .Register .box .wrapper h3 {
   font-weight: medium;
   font-size: 13px;
@@ -111,7 +98,7 @@
   background-color: white;
   border: 1px solid #efefef;
   width: 600px;
-  height: 1000px;
+  height: 700px;
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -143,4 +130,20 @@
   height: 40px;
   color: white;
   background-color: #353;
+}
+
+.Register .box .wrapper .Btn {
+  margin-top: 30px;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+.Register .box .wrapper .Btn button {
+  font-size: 15px;
+}
+.Bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
 }

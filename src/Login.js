@@ -1,6 +1,5 @@
-import { ReactComponent as ArrowIcon } from "./assets/backArrow.svg";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Bar from "./Bar";
 const Login = () => {
   axios
     .post("https://databasedesign.herokuapp.com/api/sign-in", {
@@ -14,19 +13,12 @@ const Login = () => {
       console.log(error);
     });
 
-  const navigate = useNavigate();
   const save = () => {
     alert("로그인되었습니다!");
   };
   return (
     <div className="Login">
-      <div className="bar">
-        <div className="icon">
-          <ArrowIcon onClick={() => navigate("/")} />
-        </div>
-        <h4>로그인페이지</h4>
-        <div></div>
-      </div>
+      <Bar pagename={"로그인페이지"} />
 
       <div className="box">
         <div className="wrapper">
