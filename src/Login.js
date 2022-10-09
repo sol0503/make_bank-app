@@ -1,6 +1,19 @@
 import { ReactComponent as ArrowIcon } from "./assets/backArrow.svg";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 const Login = () => {
+  axios
+    .post("https://databasedesign.herokuapp.com/api/sign-in", {
+      username: "hongill4567",
+      password: "hong12345",
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
   const navigate = useNavigate();
   const save = () => {
     alert("로그인되었습니다!");
