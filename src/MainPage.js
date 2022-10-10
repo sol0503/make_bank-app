@@ -56,6 +56,7 @@ const MainPage = () => {
           img={"/woori.png"}
         /> */}
       </div>
+      <button onClick={() => navigate("/transaction")}>거래내역</button>
     </div>
   );
 };
