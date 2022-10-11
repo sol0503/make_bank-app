@@ -7,7 +7,7 @@ import Extra from "./RegisterSrc/Extra";
 
 const Register = () => {
   const [count, setCount] = useState(0);
-  const [show, setShow] = useState(true);
+  const [show1, setShow1] = useState(false);
   const regist = async (username, password) => {
     const res = await axios
       .post("https://databasedesign.herokuapp.com/api/sign-up", {
@@ -27,11 +27,6 @@ const Register = () => {
   const onMinus = () => {
     setCount((i) => i - 1);
   };
-  const isShow = () => {
-    setShow(() => {
-      !show;
-    });
-  };
 
   return (
     <div className="Register">
@@ -45,9 +40,9 @@ const Register = () => {
           {count === 2 && <Extra />}
 
           <div className="Btn">
-            <button onClick={onMinus}>이전페이지</button>
+            {count != 0 && <button onClick={onMinus}>이전페이지</button>}
             <div></div>
-            <button onClick={onAdd}>다음페이지</button>
+            {count != 2 && <button onClick={onAdd}>다음페이지</button>}
           </div>
           <div className="finish">
             <button onClick={() => regist("hongill4567", "hong12345")}>
