@@ -7,7 +7,6 @@ import Extra from "./RegisterSrc/Extra";
 
 const Register = () => {
   const [count, setCount] = useState(0);
-  const [show1, setShow1] = useState(false);
   const regist = async (username, password) => {
     const res = await axios
       .post("https://databasedesign.herokuapp.com/api/sign-up", {
