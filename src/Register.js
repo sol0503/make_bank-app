@@ -9,7 +9,7 @@ const Register = () => {
   const [count, setCount] = useState(0);
   const regist = async (username, password) => {
     const res = await axios
-      .post("https://databasedesign.herokuapp.com/api/sign-up", {
+      .post("/api/sign-up", {
         username: username,
         paasword: password,
       })
