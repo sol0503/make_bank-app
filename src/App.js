@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
 import Transaction from "./Transcation";
+import AccountInfo from "./AcountInfo";
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/transaction" element={<Transaction />} />
+        <Route path="/AccountInfo" element={<AccountInfo />} />
       </Routes>
     </BrowserRouter>
   );

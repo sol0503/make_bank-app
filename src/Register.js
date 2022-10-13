@@ -38,7 +38,7 @@ const Register = () => {
           {count === 1 && <Need />}
           {count === 2 && <Extra />}
 
-          <div className="Btn">
+          <div className="btns">
             {count != 0 && <button onClick={onMinus}>이전페이지</button>}
             <div></div>
             {count != 2 && <button onClick={onAdd}>다음페이지</button>}

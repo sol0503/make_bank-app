@@ -34,11 +34,12 @@ const MainPage = () => {
         <div className="box">
           <div></div>
           <div className="main_mid">
-            <div>
+            <div className="account">
               <Btn props={"/transaction"} name={"거래내역"} />
+              <Btn props={"/AccountInfo"} name={"예금계좌정보"} />
             </div>
             <div className="cards">
-              <Card
+              {/* <Card
                 props={"https://www.shinhan.com/index.jsp"}
                 name={"신한은행"}
                 img={"/sinhan.png"}
@@ -62,7 +63,7 @@ const MainPage = () => {
                 props={"https://www.kakaobank.com/"}
                 name={"카카오뱅크"}
                 img={"/kakao.png"}
-              />
+              /> */}
               {/* <Card
           props={"https://www.wooribank.com/"}
           name={"우리은행"}
