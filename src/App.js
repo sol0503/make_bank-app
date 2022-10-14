@@ -6,6 +6,8 @@ import Login from "./Login";
 import Register from "./Register";
 import Transaction from "./Transcation";
 import AccountInfo from "./AcountInfo";
+import CardInfo from "./CardInfo";
+import Client from "./Client";
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +17,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/transaction" element={<Transaction />} />
         <Route path="/AccountInfo" element={<AccountInfo />} />
+        <Route path="/CardInfo" element={<CardInfo />} />
+        <Route path="/Client" element={<Client />} />
       </Routes>
     </BrowserRouter>
   );

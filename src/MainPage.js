@@ -34,10 +34,17 @@ const MainPage = () => {
         <div className="box">
           <div></div>
           <div className="main_mid">
-            <div className="account">
-              <Btn props={"/transaction"} name={"거래내역"} />
-              <Btn props={"/AccountInfo"} name={"예금계좌정보"} />
+            <div className="column1">
+              <div className="row1">
+                <Btn props={"/Client"} name={"고객정보"} />
+                <Btn props={"/CardInfo"} name={"카드정보"} />
+              </div>
+              <div className="row2">
+                <Btn props={"/transaction"} name={"거래내역"} />
+                <Btn props={"/AccountInfo"} name={"예금계좌정보"} />
+              </div>
             </div>
+
             <div className="cards">
               {/* <Card
                 props={"https://www.shinhan.com/index.jsp"}
