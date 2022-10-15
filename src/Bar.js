@@ -8,7 +8,7 @@ const Bar = ({ pagename }) => {
       <div className="icon">
         <ArrowIcon onClick={() => navigate("/")} />
       </div>
-      <h4>{pagename}</h4>
+      <h3>{pagename}</h3>
       <div></div>
     </div>
   );
