@@ -7,24 +7,24 @@ const Transaction = () => {
       <div className="box">
         <div className="wrapper">
           <div className="info">
-            <div>
-              <input placeholder="이름"></input>
-            </div>
-            <div>
-              <select name="month">
-                <option>전체</option>
-                <option>한달</option>
-              </select>
-            </div>
-            <div>
-              <button>입력</button>
-            </div>
+            <input placeholder="이름"></input>
+            <select name="month">
+              <option>전체</option>
+              <option>한달</option>
+            </select>
+            <button>입력</button>
           </div>
           <br />
           <div className="content">
-            <div className="block">계좌</div>
-            <div className="price">값</div>
-            <div className="what">입력/출력</div>
+            <div className="block">
+              <h3>계좌</h3>
+            </div>
+            <div className="price">
+              <h3>값</h3>
+            </div>
+            <div className="what">
+              <h3>입력/출력</h3>
+            </div>
           </div>
         </div>
       </div>

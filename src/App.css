@@ -95,8 +95,9 @@
 .box .wrapper input {
   width: 400px;
   border: none;
-  height: 28px;
+  height: 50px;
   border-bottom: 2px solid gray;
+  font-size: 30px;
 }
 
 .box .wrapper .find {
@@ -207,12 +208,43 @@
   width: 100%;
   height: 100vh;
 }
+.Transaction .wrapper {
+  flex-direction: column;
+}
+
 .Transaction .info {
+  margin-top: 20px;
   flex-direction: row;
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.Transaction .wrapper .info input {
+  margin-left: 10px;
+  width: 55%;
+}
+.Transaction .wrapper .info select {
+  border-radius: 20px;
+  width: 15%;
+}
+.Transaction .wrapper .info button {
+  border-radius: 20px;
+  width: 15%;
+  margin-right: 10px;
 }
 .Transaction .content {
   display: flex;
+  justify-content: space-between;
+}
+.Transaction .content .block {
+  width: 100%;
+}
+.Transaction .content .price {
+  width: 100%;
+}
+.Transaction .content .what {
+  width: 100%;
 }
 
 .Btn {
@@ -237,7 +269,34 @@
   width: 100%;
   height: 100vh;
 }
-
+.AccountInfo .wrapper {
+  display: block;
+}
+.AccountInfo .wrapper .search {
+  display: flex;
+  justify-content: space-between;
+}
+.AccountInfo .wrapper .search input {
+  width: 80%;
+}
+.AccountInfo .wrapper button {
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 30px;
+}
+.AccountInfo .wrapper .info {
+  display: flex;
+  justify-content: space-between;
+}
+.AccountInfo .wrapper .info .block {
+  width: 50%;
+  display: block;
+}
+.AccountInfo .wrapper .info .price {
+  display: block;
+  width: 50%;
+}
 .CardInfo {
   background-color: #f5fef1;
   width: 100%;
@@ -248,4 +307,17 @@
   background-color: #f5fef1;
   width: 100%;
   height: 100vh;
+}
+.Birth {
+  background-color: #f5fef1;
+  width: 100%;
+  height: 100vh;
+}
+.Birth .block {
+  width: 100%;
+}
+.Birth .title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

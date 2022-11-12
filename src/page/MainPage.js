@@ -42,7 +42,11 @@ const MainPage = () => {
                 <Btn props={"/AccountInfo"} name={"예금계좌정보"} />
               </div>
               <div className="row2">
-                <Btn props={""} name={"WHOSE BIRTHDAY"} className="birth"></Btn>
+                <Btn
+                  props={"/Birth"}
+                  name={"WHOSE BIRTHDAY"}
+                  className="birth"
+                ></Btn>
               </div>
             </div>
 

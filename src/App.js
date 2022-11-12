@@ -5,9 +5,10 @@ import { useNavigate } from "react-router-dom";
 import Login from "./page/Login";
 import Register from "./page/Register";
 import Transaction from "./page/Transcation";
-import AccountInfo from "./AcountInfo";
+import AccountInfo from "./page/AcountInfo";
 import CardInfo from "./page/CardInfo";
 import Client from "./page/Client";
+import Birth from "./page/Birth";
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/AccountInfo" element={<AccountInfo />} />
         <Route path="/CardInfo" element={<CardInfo />} />
         <Route path="/Client" element={<Client />} />
+        <Route path="/Birth" element={<Birth />} />
       </Routes>
     </BrowserRouter>
   );
