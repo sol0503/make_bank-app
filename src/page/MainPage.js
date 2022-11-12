@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Btn from "./Btn";
-import Card from "./Card";
+import Btn from "../Btn";
+import Card from "../Card";
 <meta
   name="viewport"
   content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
@@ -36,12 +36,13 @@ const MainPage = () => {
           <div className="main_mid">
             <div className="column1">
               <div className="row1">
-                <Btn props={"/Client"} name={"고객정보"} />
-                <Btn props={"/CardInfo"} name={"카드정보"} />
-              </div>
-              <div className="row2">
+                {/* <Btn props={"/Client"} name={"고객정보"} /> */}
+                {/* <Btn props={"/CardInfo"} name={"카드정보"} /> */}
                 <Btn props={"/transaction"} name={"거래내역"} />
                 <Btn props={"/AccountInfo"} name={"예금계좌정보"} />
+              </div>
+              <div className="row2">
+                <Btn props={""} name={"WHOSE BIRTHDAY"} className="birth"></Btn>
               </div>
             </div>
 

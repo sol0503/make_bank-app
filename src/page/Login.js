@@ -1,5 +1,5 @@
 import axios from "axios";
-import Bar from "./Bar";
+import Bar from "../Bar";
 const Login = () => {
   axios
     .post("https://databasedesign.herokuapp.com/api/sign-in", {

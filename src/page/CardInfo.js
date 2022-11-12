@@ -1,9 +1,9 @@
-import Bar from "./Bar";
+import Bar from "../Bar";
 
 const CardInfo = () => {
   return (
     <div className="CardInfo">
-      <Bar pagename={"예금계좌 거래내역 페이지"} />
+      <Bar pagename={"카드정보 페이지"} />
       <div className="box">
         <div className="wrapper">
           <div className="block">

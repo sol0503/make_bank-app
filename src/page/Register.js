@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
-import Bar from "./Bar";
-import Name from "./RegisterSrc/Name";
-import Need from "./RegisterSrc/Need";
-import Extra from "./RegisterSrc/Extra";
+import Bar from "../Bar";
+import Name from "../RegisterSrc/Name";
+import Need from "../RegisterSrc/Need";
+import Extra from "../RegisterSrc/Extra";
 
 const Register = () => {
   const [count, setCount] = useState(0);

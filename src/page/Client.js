@@ -1,4 +1,4 @@
-import Bar from "./Bar";
+import Bar from "../Bar";
 const Client = () => {
   return (
     <div className="Client">

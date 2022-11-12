@@ -1,13 +1,13 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainPage from "./MainPage";
+import MainPage from "./page/MainPage";
 import { useNavigate } from "react-router-dom";
-import Login from "./Login";
-import Register from "./Register";
-import Transaction from "./Transcation";
+import Login from "./page/Login";
+import Register from "./page/Register";
+import Transaction from "./page/Transcation";
 import AccountInfo from "./AcountInfo";
-import CardInfo from "./CardInfo";
-import Client from "./Client";
+import CardInfo from "./page/CardInfo";
+import Client from "./page/Client";
 function App() {
   return (
     <BrowserRouter>
