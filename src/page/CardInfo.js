@@ -6,23 +6,23 @@ const CardInfo = () => {
       <Bar pagename={"카드정보 페이지"} />
       <div className="box">
         <div className="wrapper">
-          <div className="block">
-            <h1>카드ID(번호)</h1>
-            <h2>카드신청일자</h2>
-            <h2>카드한도금액</h2>
-            <h2>카드결제일자</h2>
-            <h2>카드종류</h2>
-            <h2>고객주민번호</h2>
-            <h2>예금계좌ID</h2>
+          <div className="search">
+            <input placeholder="이름"></input>
+            <button>입력</button>
           </div>
-          <div className="price">
-            <h1>카드ID(번호)</h1>
-            <h2>카드신청일자</h2>
-            <h2>카드한도금액</h2>
-            <h2>카드결제일자</h2>
-            <h2>카드종류</h2>
-            <h2>고객주민번호</h2>
-            <h2>예금계좌ID</h2>
+          <div className="main">
+            <div className="block">
+              <h3>신용카드</h3>
+            </div>
+            <div className="price">
+              <h3>연결계좌</h3>
+            </div>
+            <div className="">
+              <h3>사용금액</h3>
+            </div>
+            <div>
+              <h3>사용한도</h3>
+            </div>
           </div>
         </div>
       </div>

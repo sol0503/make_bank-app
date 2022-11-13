@@ -37,16 +37,11 @@ const MainPage = () => {
             <div className="column1">
               <div className="row1">
                 {/* <Btn props={"/Client"} name={"고객정보"} /> */}
-                {/* <Btn props={"/CardInfo"} name={"카드정보"} /> */}
-                <Btn props={"/transaction"} name={"거래내역"} />
+                <Btn props={"/CardInfo"} name={"카드정보"} />
                 <Btn props={"/AccountInfo"} name={"예금계좌정보"} />
               </div>
               <div className="row2">
-                <Btn
-                  props={"/Birth"}
-                  name={"WHOSE BIRTHDAY"}
-                  className="birth"
-                ></Btn>
+                <Btn props={"/Birth"} name={"WHOSE BIRTHDAY"}></Btn>
               </div>
             </div>
 

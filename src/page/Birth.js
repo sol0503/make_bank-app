@@ -32,6 +32,17 @@ const Birth = () => {
                 </div>
                 <div></div>
               </div>
+              <div className="who">
+                <div>
+                  <h3>이름</h3>
+                </div>
+                <div>
+                  <h3>주소</h3>
+                </div>
+                <div>
+                  <h3>생일</h3>
+                </div>
+              </div>
             </div>
           </div>
         </div>

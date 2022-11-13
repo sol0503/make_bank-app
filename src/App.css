@@ -57,6 +57,8 @@
 }
 .MainPage .main .box .main_mid .column1 .row2 {
   flex-direction: row;
+  display: flex;
+  justify-content: space-between;
 }
 .MainPage .main .box .main_mid .column1 .row2 .Btn {
   width: 100%;
@@ -97,7 +99,6 @@
   border: none;
   height: 50px;
   border-bottom: 2px solid gray;
-  font-size: 30px;
 }
 
 .box .wrapper .find {
@@ -208,32 +209,52 @@
   width: 100%;
   height: 100vh;
 }
-.Transaction .wrapper {
-  flex-direction: column;
+.Transaction .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Transaction .info {
   margin-top: 20px;
-  flex-direction: row;
+  /* flex-direction: column; */
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-
-.Transaction .wrapper .info input {
+.Transaction .wrapper {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-top: 30px;
+  border-radius: 15px;
+  background-color: white;
+  border: 1px solid #efefef;
+  width: 1000px;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+}
+.Transaction .wrapper .info .name {
   margin-left: 10px;
   width: 55%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
 }
 .Transaction .wrapper .info select {
   border-radius: 20px;
   width: 15%;
+  font-size: 20px;
 }
 .Transaction .wrapper .info button {
   border-radius: 20px;
-  width: 15%;
+  width: 150px;
+  height: 80px;
   margin-right: 10px;
+  font-size: 20px;
 }
-.Transaction .content {
+
+.Transaction .main .content {
   display: flex;
   justify-content: space-between;
 }
@@ -270,39 +291,100 @@
   height: 100vh;
 }
 .AccountInfo .wrapper {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AccountInfo .box1 {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-top: 30px;
+  border-radius: 15px;
+  background-color: white;
+  border: 1px solid #efefef;
+  width: 1000px;
+  height: 900px;
+}
+.AccountInfo .box2 {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-top: 30px;
+  border-radius: 15px;
+  background-color: white;
+  border: 1px solid #efefef;
+  width: 1000px;
+  height: 900px;
+}
+.AccountInfo .info {
+  display: flex;
+  justify-content: space-around;
 }
 .AccountInfo .wrapper .search {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
 .AccountInfo .wrapper .search input {
   width: 80%;
+  border-radius: 30px;
+  font-size: 30px;
 }
-.AccountInfo .wrapper button {
+.AccountInfo .wrapper .search button {
   width: 200px;
-  height: 50px;
+  height: 70px;
   font-size: 30px;
   border-radius: 30px;
 }
-.AccountInfo .wrapper .info {
-  display: flex;
-  justify-content: space-between;
+
+.AccountInfo .main .center button {
+  height: 100px;
+  width: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 40px;
+  font-size: 30px;
 }
+.AccountInfo .search {
+  display: flex;
+}
+
 .AccountInfo .wrapper .info .block {
-  width: 50%;
   display: block;
 }
 .AccountInfo .wrapper .info .price {
   display: block;
-  width: 50%;
+}
+.AccountInfo .trans .Btn button {
+  width: 100px;
+  font-size: 20px;
+  height: 30px;
 }
 .CardInfo {
   background-color: #f5fef1;
   width: 100%;
   height: 100vh;
 }
-
+.CardInfo .wrapper {
+  display: block;
+}
+.CardInfo .wrapper .search {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.CardInfo .wrapper .search input {
+  width: 80%;
+}
+.CardInfo .wrapper button {
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 30px;
+}
+.CardInfo .main {
+  display: flex;
+  justify-content: space-around;
+}
 .Client {
   background-color: #f5fef1;
   width: 100%;
@@ -320,4 +402,8 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+.Birth .who {
+  display: flex;
+  justify-content: space-around;
 }
