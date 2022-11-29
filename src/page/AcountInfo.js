@@ -5,57 +5,26 @@ import Btn from "../Btn";
 const AccountInfo = () => {
   const [name, setName] = useState("");
   // const [show, setShow] = useState(false);
+  const [address, setAddress] = useState(null);
+  const [job, setJob] = useState(null);
   const submit = (e) => {
     console.log(name);
     axios({
-      url: "/query/accounts/" + name,
+      // url: "/query/accounts/" + name,
+      url: "/query/users/" + name,
       method: "get",
-      data: {
-        accountId: "0000-0000",
-        userId: 1,
-        createDate: "2022-11-28",
-        cardApply: false,
-        balance: 0,
-        accountType: 1,
-        userName: "홍길동",
-        phone: "010-0000-0000",
-        email: "aaa@gmail.com",
-        id: 1,
-        socialNumber: null,
-      },
-      // baseURL: "http://localhost:8080",
-      //withCredentials: true,
     }).then(function (response) {
-      console.log(response.data);
-      console.log(response.data.JavaData[0].NICKNAME);
+      response.data.map((value) => {
+        setAddress(value.address);
+        setJob(value.job);
+        console.log(value.id);
+        console.log(value.address);
+        console.log(value.job);
+      });
     });
+
     // setShow(!show);
   };
-  // const testAxios = ({ username }) => {
-  //   axios({
-  //     url: "/query/accounts/" + username,
-  //     method: "get",
-  //     data: {
-  //       accountId: "0000-0000",
-  //       userId: 1,
-  //       createDate: "2022-11-28",
-  //       cardApply: false,
-  //       balance: 0,
-  //       accountType: 1,
-  //       userName: "홍길동",
-  //       phone: "010-0000-0000",
-  //       email: "aaa@gmail.com",
-  //       id: 1,
-  //       socialNumber: null,
-  //     },
-
-  //     baseURL: "http://localhost:8080",
-  //     //withCredentials: true,
-  //   }).then(function (response) {
-  //     console.log(response.data);
-  //     console.log(response.data.JavaData[0].NICKNAME);
-  //   });
-  // };
   return (
     <div className="AccountInfo">
       <Bar pagename={"예금계좌 정보 페이지"} />
@@ -76,7 +45,7 @@ const AccountInfo = () => {
             <div className="who">
               <h2>이름</h2>
               <ul>
-                <li></li>
+                <li>{name}</li>
                 <li></li>
               </ul>
             </div>
