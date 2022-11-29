@@ -4,6 +4,7 @@ import Bar from "../Bar";
 import Btn from "../Btn";
 const AccountInfo = () => {
   const [name, setName] = useState("");
+  // const [show, setShow] = useState(false);
   const submit = (e) => {
     console.log(name);
     axios({
@@ -22,13 +23,13 @@ const AccountInfo = () => {
         id: 1,
         socialNumber: null,
       },
-
-      baseURL: "http://localhost:8080",
+      // baseURL: "http://localhost:8080",
       //withCredentials: true,
     }).then(function (response) {
       console.log(response.data);
       console.log(response.data.JavaData[0].NICKNAME);
     });
+    // setShow(!show);
   };
   // const testAxios = ({ username }) => {
   //   axios({
@@ -72,6 +73,13 @@ const AccountInfo = () => {
               <button onClick={submit}>입력</button>
             </div>
             <br />
+            <div className="who">
+              <h2>이름</h2>
+              <ul>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
             <div className="info">
               <div className="when">
                 <h3>날짜</h3>
