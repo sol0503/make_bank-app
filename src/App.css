@@ -334,7 +334,13 @@
   font-size: 30px;
   border-radius: 30px;
 }
-
+.AccountInfo .wrapper .who li button {
+  font-size: 25px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background-color: white;
+}
 .AccountInfo .main .center button {
   height: 100px;
   width: 200px;

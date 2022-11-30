@@ -7,7 +7,7 @@ const AccountInfo = () => {
 
   const [name, setName] = useState("");
   // const [show, setShow] = useState(false);
-  const [data2, setData2] = useState([]);
+  const [data2, setData2] = useState(null);
   const [data, setData] = useState([]);
   const submit = (e) => {
     console.log(name);
@@ -29,11 +29,12 @@ const AccountInfo = () => {
     // axios넣기;
     axios({
       url: "/query/users/" + userId + "/accounts",
+
       method: "get",
     }).then(function (response) {
       setData2(response.data);
     });
-    console.log(data2);
+    console.log("/query/users/" + userId + "/accounts");
   };
 
   return (
@@ -58,13 +59,12 @@ const AccountInfo = () => {
               <ul>
                 {data.map((value) => (
                   <li key={value.id}>
-                    {value.name}
                     <button
                       value={value.id}
                       data-id={value.id}
                       onClick={onClick}
                     >
-                      버튼
+                      {value.name}
                     </button>
                   </li>
                 ))}
