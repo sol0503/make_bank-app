@@ -3,10 +3,12 @@ import axios from "axios";
 import Bar from "../Bar";
 import Btn from "../Btn";
 const AccountInfo = () => {
+  const [selectedUserId, setSelectedUserId] = useState(-1);
+
   const [name, setName] = useState("");
   // const [show, setShow] = useState(false);
-  const [address, setAddress] = useState(null);
-  const [job, setJob] = useState(null);
+  const [data2, setData2] = useState([]);
+  const [data, setData] = useState([]);
   const submit = (e) => {
     console.log(name);
     axios({
@@ -14,17 +16,26 @@ const AccountInfo = () => {
       url: "/query/users/" + name,
       method: "get",
     }).then(function (response) {
-      response.data.map((value) => {
-        setAddress(value.address);
-        setJob(value.job);
-        console.log(value.id);
-        console.log(value.address);
-        console.log(value.job);
-      });
+      setData(response.data);
     });
-
     // setShow(!show);
   };
+
+  const onClick = (e) => {
+    e.preventDefault();
+    const userId = e.currentTarget.dataset.id;
+    console.log(e.currentTarget.dataset);
+    console.log(e.currentTarget.dataset.id);
+    // axios넣기;
+    axios({
+      url: "/query/users/" + userId + "/accounts",
+      method: "get",
+    }).then(function (response) {
+      setData2(response.data);
+    });
+    console.log(data2);
+  };
+
   return (
     <div className="AccountInfo">
       <Bar pagename={"예금계좌 정보 페이지"} />
@@ -45,8 +56,18 @@ const AccountInfo = () => {
             <div className="who">
               <h2>이름</h2>
               <ul>
-                <li>{name}</li>
-                <li></li>
+                {data.map((value) => (
+                  <li key={value.id}>
+                    {value.name}
+                    <button
+                      value={value.id}
+                      data-id={value.id}
+                      onClick={onClick}
+                    >
+                      버튼
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="info">
