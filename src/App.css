@@ -380,12 +380,20 @@
 }
 .CardInfo .wrapper .search input {
   width: 80%;
+  font-size: 30px;
 }
 .CardInfo .wrapper button {
   width: 200px;
   height: 50px;
   font-size: 30px;
   border-radius: 30px;
+}
+.CardInfo .wrapper .who li button {
+  font-size: 25px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background-color: white;
 }
 .CardInfo .main {
   display: flex;

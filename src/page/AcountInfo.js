@@ -7,7 +7,7 @@ const AccountInfo = () => {
 
   const [name, setName] = useState("");
   // const [show, setShow] = useState(false);
-  const [data2, setData2] = useState(null);
+  const [data2, setData2] = useState([]);
   const [data, setData] = useState([]);
   const submit = (e) => {
     console.log(name);
@@ -35,6 +35,7 @@ const AccountInfo = () => {
       setData2(response.data);
     });
     console.log("/query/users/" + userId + "/accounts");
+    console.log(data2);
   };
 
   return (
@@ -73,12 +74,27 @@ const AccountInfo = () => {
             <div className="info">
               <div className="when">
                 <h3>날짜</h3>
+                <ul>
+                  {data2.map((value) => (
+                    <li key={value.id}>{value.createDate}</li>
+                  ))}
+                </ul>
               </div>
               <div className="block">
-                <h3>예금계좌ID</h3>
+                <h3>예금계좌</h3>
+                <ul>
+                  {data2.map((value) => (
+                    <li key={value.id}>{value.accountId}</li>
+                  ))}
+                </ul>
               </div>
               <div className="price">
                 <h3>잔고</h3>
+                <ul>
+                  {data2.map((value) => (
+                    <li key={value.id}>{value.balance}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
