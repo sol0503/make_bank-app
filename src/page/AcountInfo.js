@@ -9,6 +9,7 @@ const AccountInfo = () => {
   // const [show, setShow] = useState(false);
   const [data2, setData2] = useState([]);
   const [data, setData] = useState([]);
+  const [data3, setData3] = useState([]);
   const submit = (e) => {
     console.log(name);
     axios({
@@ -36,6 +37,22 @@ const AccountInfo = () => {
     });
     console.log("/query/users/" + userId + "/accounts");
     console.log(data2);
+  };
+
+  const onHistory = (e) => {
+    e.preventDefault();
+    const userId = e.currentTarget.dataset.id;
+    console.log(e.currentTarget.dataset);
+    console.log(e.currentTarget.dataset.id);
+    // axios넣기;
+    axios({
+      url: "/query/accountInfo/" + userId,
+      method: "get",
+    }).then(function (response) {
+      console.log(response.data);
+      setData3(response.data.accountRecords);
+    });
+    console.log("/query/accountInfo/" + userId);
   };
 
   return (
@@ -96,25 +113,69 @@ const AccountInfo = () => {
                   ))}
                 </ul>
               </div>
+              <div className="trans">
+                <h3>거래내역</h3>
+                <ul>
+                  {data2.map((value) => (
+                    <li key={value.id}>
+                      <button
+                        value={value.id}
+                        data-id={value.id}
+                        onClick={onHistory}
+                      >
+                        거래내역
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
           <div className="center">
             <button>정리</button>
           </div>
           <div className="box2">
-            <div className="info">
-              <div className="when">
-                <h3>날짜</h3>
-              </div>
-              <div className="block">
-                <h3>예금계좌ID</h3>
-              </div>
-              <div className="price">
-                <h3>잔고</h3>
-              </div>
-              <div className="trans">
-                <div className="trans_btn">
-                  <Btn props={"/transaction"} name={"거래내역"} />
+            <div className="transaction">
+              <h1>예금계좌 거래내역</h1>
+              <div className="wrapper">
+                <div className="info">
+                  <div className="name">
+                    <div></div>
+                    {/* <h3>{data2.accountId}계좌</h3> */}
+                    <div></div>
+                  </div>
+                  <select name="month">
+                    <option>전체</option>
+                    <option>한달</option>
+                  </select>
+                  <button>입력</button>
+                </div>
+                <br />
+                <div className="content">
+                  <div className="block">
+                    <h3>날짜</h3>
+                    <ul>
+                      {data3.map((value) => (
+                        <li key={value.id}>{value.transferDate}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="price">
+                    <h3>값</h3>
+                    <ul>
+                      {data3.map((value) => (
+                        <li key={value.id}>{value.amount}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="what">
+                    <h3>입금/출금</h3>
+                    <ul>
+                      {data3.map((value) => (
+                        <li key={value.id}>{value.state}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
