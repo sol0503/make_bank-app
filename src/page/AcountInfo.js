@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Bar from "../Bar";
-import Btn from "../Btn";
 const AccountInfo = () => {
   const [selectedUserId, setSelectedUserId] = useState(-1);
 
   const [name, setName] = useState("");
-  // const [show, setShow] = useState(false);
   const [data2, setData2] = useState([]);
   const [data, setData] = useState([]);
   const [data3, setData3] = useState([]);
@@ -19,7 +17,6 @@ const AccountInfo = () => {
     }).then(function (response) {
       setData(response.data);
     });
-    // setShow(!show);
   };
 
   const onClick = (e) => {
@@ -131,9 +128,9 @@ const AccountInfo = () => {
               </div>
             </div>
           </div>
-          <div className="center">
-            <button>정리</button>
-          </div>
+          {/* <div className="center">
+            <button>=></button>
+          </div> */}
           <div className="box2">
             <div className="transaction">
               <h1>예금계좌 거래내역</h1>

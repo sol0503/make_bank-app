@@ -53,24 +53,27 @@ const Birth = () => {
             <div className="block">
               <div className="title">
                 <div></div>
-                <div>
-                  <h2>{time() + "  생일의 주인공은~!?"}</h2>
-                  <button onClick={submit}>입력</button>
+                <div className="main">
+                  <h2>{time() + "  생일에 가장 가까운 주인공은~!?"}</h2>
+                  <button onClick={submit}>확인해보기!</button>
                 </div>
                 <div></div>
               </div>
               <div className="who">
                 <div>
-                  <h3>이름</h3>
-                  {data.name}
+                  <h2>이름</h2>
+                  <br />
+                  <h2>{data.name}</h2>
                 </div>
                 <div>
-                  <h3>주소</h3>
-                  {data.address}
+                  <h2>주소</h2>
+                  <br />
+                  <h2>{data.address}</h2>
                 </div>
                 <div>
-                  <h3>생일</h3>
-                  {data.birthday}
+                  <h2>생일</h2>
+                  <br />
+                  <h2>{data.birthday}</h2>
                 </div>
               </div>
             </div>
