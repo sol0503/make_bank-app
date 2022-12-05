@@ -79,7 +79,7 @@ const AccountInfo = () => {
                       data-id={value.id}
                       onClick={onClick}
                     >
-                      {value.name}
+                      {value.name}({value.socialNumber})
                     </button>
                   </li>
                 ))}
