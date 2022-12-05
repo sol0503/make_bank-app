@@ -406,10 +406,16 @@ li {
   width: 100%;
 }
 .AccountInfo .transaction .content .price {
-  width: 100%;
+  width: 70%;
 }
 .AccountInfo .transaction .content .what {
-  width: 100%;
+  width: 150%;
+}
+.AccountInfo .transaction .content .what .description {
+  display: flex;
+}
+.AccountInfo .transaction .content .what .description .state {
+  width: 20%;
 }
 .CardInfo {
   background-color: #f5fef1;

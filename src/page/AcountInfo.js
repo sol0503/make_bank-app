@@ -202,11 +202,22 @@ const AccountInfo = () => {
                   </div>
                   <div className="what">
                     <h3>입금/출금</h3>
-                    <ul>
-                      {showData.map((value) => (
-                        <li key={value.id}>{value.state}</li>
-                      ))}
-                    </ul>
+                    <div className="description">
+                      <div className="state">
+                        <ul>
+                          {showData.map((value) => (
+                            <li key={value.id}>{value.state}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="description">
+                        <ul>
+                          {showData.map((value) => (
+                            <li key={value.description}>{value.description}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
