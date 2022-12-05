@@ -409,14 +409,9 @@ li {
   width: 70%;
 }
 .AccountInfo .transaction .content .what {
-  width: 150%;
+  width: 130%;
 }
-.AccountInfo .transaction .content .what .description {
-  display: flex;
-}
-.AccountInfo .transaction .content .what .description .state {
-  width: 20%;
-}
+
 .CardInfo {
   background-color: #f5fef1;
   width: 100%;
