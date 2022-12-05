@@ -41,6 +41,7 @@ const AccountInfo = () => {
 
   useEffect(() => {
     setShowData(data3);
+    setSelected("all");
   }, [data3]);
 
   const handleDate = (e) => {
