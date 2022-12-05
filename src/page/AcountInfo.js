@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Bar from "../Bar";
 const AccountInfo = () => {
@@ -8,6 +8,9 @@ const AccountInfo = () => {
   const [data2, setData2] = useState([]);
   const [data, setData] = useState([]);
   const [data3, setData3] = useState([]);
+  const [showData, setShowData] = useState([]);
+  const [selected, setSelected] = useState("all");
+
   const submit = (e) => {
     console.log(name);
     axios({
@@ -35,6 +38,37 @@ const AccountInfo = () => {
     console.log("/query/users/" + userId + "/accounts");
     console.log(data2);
   };
+
+  useEffect(() => {
+    setShowData(data3);
+  }, [data3]);
+
+  const handleDate = (e) => {
+    setSelected(e.target.value);
+  };
+
+  useEffect(() => {
+    if (selected === "all") {
+      setShowData(data3);
+      return;
+    }
+
+    console.log(selected);
+    console.log(data3);
+    let date = new Date();
+    let currMonth = date.getMonth() + 1;
+    let arr = [];
+
+    for (let i = 0; i < data3.length; i++) {
+      let month = data3[i]["transferDate"].split("-")[1];
+      if (currMonth - parseInt(month) <= 1) {
+        arr.push(data3[i]);
+      }
+    }
+
+    console.log("arr", arr);
+    setShowData(arr);
+  }, [selected]);
 
   const onHistory = (e) => {
     e.preventDefault();
@@ -141,18 +175,18 @@ const AccountInfo = () => {
                     {/* <h3>{data2.accountId}계좌</h3> */}
                     <div></div>
                   </div>
-                  <select name="month">
-                    <option>전체</option>
-                    <option>한달</option>
+                  <select onChange={handleDate} name="month" value={selected}>
+                    <option value="all">전체</option>
+                    <option value="aMonth">한달</option>
                   </select>
-                  <button>입력</button>
+                  {/* <button>입력</button> */}
                 </div>
                 <br />
                 <div className="content">
                   <div className="block">
                     <h3>날짜</h3>
                     <ul>
-                      {data3.map((value) => (
+                      {showData.map((value) => (
                         <li key={value.id}>{value.transferDate}</li>
                       ))}
                     </ul>
@@ -160,7 +194,7 @@ const AccountInfo = () => {
                   <div className="price">
                     <h3>값</h3>
                     <ul>
-                      {data3.map((value) => (
+                      {showData.map((value) => (
                         <li key={value.id}>{value.amount}</li>
                       ))}
                     </ul>
@@ -168,7 +202,7 @@ const AccountInfo = () => {
                   <div className="what">
                     <h3>입금/출금</h3>
                     <ul>
-                      {data3.map((value) => (
+                      {showData.map((value) => (
                         <li key={value.id}>{value.state}</li>
                       ))}
                     </ul>
